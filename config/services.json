@@ -1,0 +1,8 @@
+{
+  "baseline": {"exact": ["www.wikipedia.org", "ru.wikipedia.org", "en.wikipedia.org", "gemini.google.com", "geminiweb-pa.clients6.google.com", "waa-pa.clients6.google.com", "gemini.gstatic.com", "accounts.google.com", "mail.google.com"], "suffix": []},
+  "openai": {"exact": [], "suffix": ["openai.com", "chatgpt.com", "oaistatic.com", "oaiusercontent.com"]},
+  "cursor": {"exact": ["accounts.x.ai", "accounts.spacex.ai", "auth.x.ai", "auth.grok.com", "auth.grokusercontent.com", "auth.grokipedia.com"], "suffix": ["cursor.com", "cursor.sh", "cursor-cdn.com", "cursorapi.com"]},
+  "claude": {"exact": ["api.anthropic.com", "mcp-proxy.anthropic.com", "assets-proxy.anthropic.com"], "suffix": ["claude.ai", "claude.com", "claudeusercontent.com", "claudemcpcontent.com"]},
+  "openrouter": {"exact": [], "suffix": ["openrouter.ai"]},
+  "grok": {"exact": ["api.x.ai", "console.x.ai", "accounts.x.ai", "auth.x.ai"], "suffix": ["grok.com"]}
+}

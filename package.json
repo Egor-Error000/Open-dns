@@ -1,0 +1,15 @@
+{
+  "name": "open-dns",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node src/render.mjs build",
+    "test": "node --test tests/policy.test.mjs tests/guide.test.mjs tests/config.test.mjs tests/offline.test.mjs tests/publication.test.mjs",
+    "check:public": "node scripts/check-public.mjs",
+    "check:dns": "node scripts/check-dns.mjs",
+    "check:https": "node scripts/check-https.mjs www.wikipedia.org gemini.google.com mail.google.com",
+    "check:boundaries": "node scripts/check-boundaries.mjs --skip-dns",
+    "check:client": "node scripts/check-client.mjs"
+  }
+}

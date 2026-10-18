@@ -1,0 +1,13 @@
+# UFW handles ingress (22, 80, 443). This table protects relay destinations.
+table inet smartdns_guard {
+    chain output {
+        type filter hook output priority -5; policy accept;
+        # Replies to clients are not relay-initiated connections.
+        ct direction reply accept
+        # The only local upstream is dnsdist DoH on TCP 8443.
+        meta skuid www-data ip daddr 127.0.0.0/8 tcp dport != 8443 drop
+        meta skuid www-data ip daddr { 0.0.0.0/8, 10.0.0.0/8, 100.64.0.0/10, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/4, 240.0.0.0/4 } drop
+        # Relay DNS resolution and generated listeners currently use IPv4 only.
+        meta skuid www-data meta nfproto ipv6 drop
+    }
+}

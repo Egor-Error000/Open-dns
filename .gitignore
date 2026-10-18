@@ -1,0 +1,27 @@
+# Private deployment settings: create these locally, never commit them.
+/config/server.json
+/config/*.local.json
+/config/*.private.json
+/.local/
+/build/
+/results/
+/backups/
+/logs/
+/pilot/
+/.continue/
+/.ssh/
+node_modules/
+__pycache__/
+known_hosts
+id_rsa*
+id_ed25519*
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+.env*
+*.pcap
+*.pcapng
+*.har
